@@ -1,0 +1,127 @@
+.navScroll {
+  display: flex;
+  height: 76rpx;
+}
+
+.scrollItem {
+  padding: 0 10rpx;
+  font-size: 30rpx;
+  white-space: nowrap;
+  height: 55rpx;
+  padding: 10rpx 20rpx;
+  border-bottom: 1rpx solid #bbb9b9;
+  line-height: 55rpx;
+}
+
+.active {
+  border-bottom: 1rpx solid #dd001b;
+}
+
+.videoScroll {
+  background-color: rgb(217, 223, 222);
+}
+
+.videoItem {
+  display: flex;
+  padding: 0 3%;
+  flex-direction: column;
+  background-color: aliceblue;
+  margin-bottom: 30rpx;
+}
+
+.videoHeader video {
+  width: 100%;
+  height: 350rpx;
+  border-radius: 10rpx;
+  margin-top: 15rpx;
+}
+
+.videoHeader .imageBack {
+  height: 350rpx;
+  border-radius: 10rpx;
+  margin-top: 15rpx;
+  margin-bottom: 10rpx;
+  background-color: black;
+}
+
+.videoHeader image {
+  width: auto;
+  height: 350rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.videoBody text {
+  font-size: 30rpx;
+  display: inline-block;
+  line-height: 40rpx;
+  margin: 0 10rpx;
+  padding-bottom: 15rpx;
+}
+
+.videoFooter {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 10rpx;
+  border-top: 1rpx solid rgb(182, 181, 181);
+  margin: 0 5rpx;
+  justify-content: space-between;
+}
+
+.videoFooter image {
+  width: 60rpx;
+  border-radius: 50%;
+}
+
+.videoFooter .nickName {
+  font-size: 28rpx;
+  white-space: nowrap;
+  /* display: inline-block;
+  line-height: 50rpx; */
+  margin-left: 15rpx;
+}
+
+.videoFooter button {
+  background-color: #f0f8ff;
+}
+
+.videoFooter .icon-xihuan1 {
+  color: #dd001b;
+  padding-right: 40rpx;
+}
+
+.videoFooter .icon-taolun {
+  padding-right: 40rpx;
+}
+
+.videoFooter .iconfont {
+  font-size: 50rpx;
+}
+
+.videoFooter .count1 {
+  font-size: 20rpx;
+  position: absolute;
+  left: 40rpx;
+  bottom: 40rpx;
+  z-index: 10;
+}
+
+.videoFooter .count2 {
+  font-size: 20rpx;
+  position: absolute;
+  left: 135rpx;
+  bottom: 40rpx;
+  z-index: 10;
+}
+
+.videoFooter .right {
+  display: flex;
+  align-items: center;
+}
+
+.videoFooter .left {
+  display: flex;
+  align-items: center;
+  height: 70rpx;
+  position: relative;
+}

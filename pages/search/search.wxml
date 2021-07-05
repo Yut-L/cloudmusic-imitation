@@ -1,0 +1,48 @@
+<view>
+	<!-- 搜索框 -->
+	<view class="header">
+		<!-- <text class="iconfont icon-yinpin1"></text> -->
+		<text class="{{results.length>0?'iconfont icon-jiantou':'iconfont icon-yinpin1'}}" bindtap="clearResults"></text>
+		<input value='{{inputValue}}' type="text" placeholder="{{placeholderData}}" bindtap="clear" bindinput="handleInput" />
+		<text wx:if="{{inputValue}}" class="iconfont icon-cha"></text>
+		<text class="iconfont icon-sousuo1" bindtap="search"></text>
+	</view>
+
+	<!-- 搜索结果列表 -->
+	<view wx:if="{{results.length>0}}" class="searchResults">
+		<scroll-view scroll-y class="">
+			<view class="resultsItem" wx:for="{{results}}" wx:key="id" data-song="{{item}}" data-index="{{index}}" bindtap="toSongDetail">
+				<text>{{item.name}}</text>
+				<text class="name">{{artists[index]}}</text>
+			</view>
+		</scroll-view>
+	</view>
+
+	<!-- 历史记录 -->
+	<view class="histroyContainer" wx:if="{{historyList.length>0}}">
+		<text class="title">历史搜索</text>
+		<view class="histroyBody">
+			<text wx:for="{{historyList}}" wx:key="index">{{item}}</text>
+		</view>
+	</view>
+
+	<!-- 热搜显示 -->
+	<view wx:if="{{!results.length>0}}" class="hotContainer">
+		<text class="hotTitle">热搜排行</text>
+		<view class="hotBody">
+			<view class="scrollItem" wx:for="{{hotList}}" wx:key="searchWord" bindtap="replace" data-name="{{item.searchWord}}">
+				<text class="">{{index+1}}</text>
+				<text class="">{{item.searchWord}}</text>
+				<image mode="widthFix" class="{{item.iconType==5?'iconImg1':'iconImg2'}}" wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}"></image>
+			</view>
+		</view>
+	</view>
+
+	<!-- 搜索关联词列表 -->
+	<view wx:if="{{inputValue}}" class="searchItemContainer">
+		<view class="searchItem" wx:for="{{searchList}}" wx:key="id" data-content="{{item.name}}" bindtap="replace2">
+			<text>{{item.name}}</text>
+		</view>
+	</view>
+
+</view>

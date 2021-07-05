@@ -1,0 +1,29 @@
+<view class="rSContainer">
+	<view class="rCHeader">
+		<image mode="widthFix" src="/static/images/recommendSong.jpg"></image>
+	</view>
+
+	<view class="listHeader">
+		<view class="left">
+			<text class="iconfont icon-bofang"></text>
+			<text>播放全部</text>
+		</view>
+		<view class="right">
+			<text class="iconfont icon-liebiao"></text>
+			<text>多选</text>
+		</view>
+	</view>
+
+	<view class="listBody">
+		<scroll-view scroll-y class="acd">
+			<view class="scrollItem" wx:for="{{recommendList}}" wx:key="id" data-song="{{item}}" data-index="{{index}}" bindtap="toSongDetail">
+				<image mode="widthFix" src="{{item.al.picUrl}}"/>
+				<view>
+					<text>{{item.name}}</text>
+					<text>{{artists[index]}}</text>
+				</view>
+				<text class="iconfont icon-gengduo"></text>
+			</view>
+		</scroll-view>
+	</view>
+</view>

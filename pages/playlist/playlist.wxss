@@ -1,0 +1,52 @@
+.navScroll {
+  display: flex;
+  height: 76rpx;
+}
+
+.scrollItem {
+  padding: 0 10rpx;
+  font-size: 30rpx;
+  white-space: nowrap;
+  height: 55rpx;
+  padding: 10rpx 20rpx;
+  border-bottom: 1rpx solid #bbb9b9;
+  line-height: 55rpx;
+  margin-bottom: 10rpx;
+}
+
+.active {
+  border-bottom: 1rpx solid #dd001b;
+}
+
+.listItem {
+  display: flex;
+  padding: 0 15rpx;
+  height: 160rpx;
+  margin: 15rpx 0;
+}
+
+.listItem image {
+  width: 140rpx;
+  border-radius: 10rpx;
+  margin: 0 10rpx;
+}
+
+.listItem view {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15rpx;
+}
+
+.listItem text {
+  line-height: 40rpx;
+  font-size: 30rpx;
+  max-width: 530rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 10rpx;
+}
+
+.listItem .creator{
+  font-size: 26rpx;
+}

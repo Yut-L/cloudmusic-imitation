@@ -1,0 +1,21 @@
+<view class="playlistContainer">
+	<!-- 标签区域 -->
+	<scroll-view class="navScroll" scroll-x enable-flex>
+		<view class="scrollItem {{tag===item.name?'active':''}}" bindtap="navChange" wx:for='{{hotGrouplist}}' wx:key="id" data-name="{{item.name}}">
+			{{item.name}}
+		</view>
+	</scroll-view>
+
+	<!-- 歌单区域 -->
+  <scroll-view style='height:{{scrollHeight}}px' scroll-y enable-flex refresher-enabled bindscrolltolower="listScrollLower">
+    <view class="listBody">
+		<view class="listItem" wx:for="{{hotlist}}" wx:key="id" bindtap="toplaylistDetail" data-song="{{item}}">
+			<image mode="widthFix" src="{{item.coverImgUrl}}" />
+			<view>
+				<text>{{item.name}}</text>
+				<text class="creator">by {{item.creator.nickname}}</text>
+			</view>
+		</view>
+	</view>
+  </scroll-view>
+</view>

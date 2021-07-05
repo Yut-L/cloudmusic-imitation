@@ -1,0 +1,62 @@
+<!-- 轮播区域 -->
+<view>
+	<swiper class="banners" indicator-dots indicator-color="ivory" indicator-active-color="#dd001b">
+		<swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
+			<image src="{{item.pic}}" mode="widthFix"></image>
+		</swiper-item>
+	</swiper>
+</view>
+
+<!-- 导航区域 -->
+<view class="navContainer">
+	<view class="navItem" bindtap="toRecommendSong">
+		<text class="iconfont icon-yinyue"></text>
+		<text>每日推荐</text>
+	</view>
+	<view class="navItem" bindtap="toPlaylist">
+		<text class="iconfont icon-gedan"></text>
+		<text>歌单</text>
+	</view>
+	<view class="navItem" bindtap="toToplistDeatail">
+		<text class="iconfont icon-paihang"></text>
+		<text>排行榜</text>
+	</view>
+	<view class="navItem" bindtap="toMv">
+		<text class="iconfont icon-shipin"></text>
+		<text>MV</text>
+	</view>
+</view>
+
+<!-- 推荐歌单区域 -->
+<view class="scrollContainer">
+	<view class="header">
+		<text class="title">推荐歌单</text>
+		<!-- <text class="more">查看更多</text> -->
+		<!-- 未实现 -->
+	</view>
+
+	<!-- 滚动区 -->
+	<scroll-view class="scrollRecommend" enable-flex scroll-x>
+		<view class="scrollItem" wx:for="{{recommendList}}" wx:key="id" data-song="{{item}}" bindtap="toplaylistDetail">
+			<image src="{{item.picUrl}}" />
+			<text>{{item.name}}</text>
+		</view>
+	</scroll-view>
+</view>
+
+<!-- 新碟区域 -->
+<view class="newestContainer">
+	<view class="header">
+		<text class="title">推荐新碟</text>
+		<!-- <text class="more">查看更多</text> -->
+		<!-- 未实现 -->
+	</view>
+
+	<!-- 滚动区 -->
+	<scroll-view class="scrollRecommend" enable-flex scroll-x>
+		<view class="scrollItem" wx:for="{{newestList}}" wx:key="id" data-song="{{item}}" bindtap="toplaylistDetail2">
+			<image src="{{item.picUrl}}" />
+			<text>{{item.name}}</text>
+		</view>
+	</scroll-view>
+</view>

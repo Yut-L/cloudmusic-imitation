@@ -1,0 +1,7 @@
+<view class="toplistContainer">
+	<view class="toplistItem" wx:for="{{toplist}}" wx:key='id' bindtap="toDetail" data-top="{{item}}">
+		<image src="{{item.coverImgUrl}}" mode="widthFix" />
+		<text>{{item.description||item.name}}</text>
+	</view>
+  <view class="toplistItemLast"></view>
+</view>

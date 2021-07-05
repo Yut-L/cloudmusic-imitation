@@ -1,0 +1,22 @@
+<view class="videoContainer">
+	<!-- 导航区域 -->
+	<view class="navScroll">
+		<view class="scrollItem {{navId==index?'active':''}}" bindtap="navChange" wx:for='{{navlist}}' wx:key="index" id="{{index}}" data-name="{{item}}">
+			{{item}}
+		</view>
+	</view>
+
+	<!-- MV列表区域 -->
+	<scroll-view style='height:{{scrollHeight}}px' class="mvScroll" scroll-y enable-flex refresher-enabled bindscrolltolower="listScrollLower" bindrefresherrefresh="mvRefresh" refresher-triggered="{{isRefresh}}">
+		<view class="mvItem" wx:for='{{mvlist}}' wx:key="id">
+			<view>
+				<video autoplay initial-time='{{startTime}}' wx:if='{{listMid==item.id}}' poster="{{item.cover}}" id="{{item.id}}" bindtimeupdate="handleTimeUpdate" src="{{url}}"></video>
+				<image wx:else mode='heightFix' id="{{item.id}}" src="{{item.cover}}" bindtap="clickMv"></image>
+			</view>
+			<view class="textContainer">
+				<text class="title">{{item.name}}</text>
+				<text class="title title2">———— {{item.artistName}}</text>
+			</view>
+		</view>
+	</scroll-view>
+</view>

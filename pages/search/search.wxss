@@ -1,0 +1,143 @@
+/* 搜索框 */
+
+.header {
+  display: flex;
+  padding: 20rpx 10rpx;
+}
+
+.header text {
+  font-size: 50rpx;
+  margin: 0 10rpx;
+}
+
+input {
+  border: 1rpx solid rgb(121, 117, 117);
+  flex: 1;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.header .icon-cha {
+  position: absolute;
+  font-size: 35rpx;
+  right: 75rpx;
+  line-height: 50rpx;
+  width: 45rpx;
+  margin: 0;
+}
+
+/* 热词显示 */
+
+.hotContainer {
+  padding: 0 20rpx;
+}
+
+.hotTitle {
+  font-size: 30rpx;
+  padding: 0 20rpx;
+}
+
+.hotBody {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.scrollItem {
+  height: 70rpx;
+  width: 50%;
+  line-height: 70rpx;
+  font-size: 30rpx;
+}
+
+.scrollItem text {
+  margin-left: 18rpx;
+}
+
+.iconImg1 {
+  width: 20rpx;
+  margin: 0 10rpx;
+}
+
+.iconImg2 {
+  width: 40rpx;
+  margin: 0 10rpx;
+}
+
+/* 关联词区域 */
+
+.searchItemContainer {
+  position: absolute;
+  border-left: 1rpx solid #cac8c8;
+  border-right: 1rpx solid #cac8c8;
+  width: 600rpx;
+  left: 72rpx;
+  top: 72rpx;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.searchItem {
+  height: 60rpx;
+  border-bottom: 1rpx solid #cac8c8;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  width: 560rpx;
+  margin: auto;
+}
+
+/* 历史搜索 */
+
+.histroyContainer {
+  padding: 20rpx;
+}
+
+.histroyContainer .title {
+  font-size: 30rpx;
+  padding: 0 20rpx;
+}
+
+.histroyBody {
+  display: flex;
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+}
+
+.histroyBody {
+  border-bottom: 1rpx solid rgb(177, 180, 184);
+}
+
+.histroyBody text {
+  font-size: 28rpx;
+  background-color: rgb(210, 212, 214);
+  line-height: 50rpx;
+  margin: 0 20rpx;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100rpx;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 980rpx;
+}
+
+.resultsItem {
+  background-color: rgb(243, 243, 243);
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 5rpx 20rpx;
+  justify-content: center;
+}
+
+.resultsItem text{
+  margin: 0 20rpx;
+}
+
+.resultsItem .name{
+  font-size: 25rpx;
+}

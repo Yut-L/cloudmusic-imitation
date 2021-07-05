@@ -1,0 +1,60 @@
+.navScroll {
+  display: flex;
+  height: 76rpx;
+}
+
+.scrollItem {
+  padding: 0 10rpx;
+  font-size: 30rpx;
+  white-space: nowrap;
+  height: 55rpx;
+  padding: 10rpx 20rpx;
+  border-bottom: 1rpx solid #bbb9b9;
+  line-height: 55rpx;
+  width: 20%;
+  text-align: center;
+}
+
+.active {
+  border-bottom: 1rpx solid #dd001b;
+}
+
+.mvScroll {
+  background-color: rgb(230, 230, 231);
+}
+
+.mvItem {
+  height: 470rpx;
+  background-color: #ffffff;
+  margin-bottom: 20rpx;
+}
+
+.mvItem image {
+  height: 360rpx;
+  margin-left: 55rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+}
+
+.mvItem .title {
+  font-size: 28rpx;
+  margin-left: 55rpx;
+  max-width: 630rpx;
+  overflow-wrap: normal;
+}
+
+.mvItem .title2 {
+  text-align: right;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.mvItem video{
+  height: 360rpx;
+  margin-left: 55rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+}

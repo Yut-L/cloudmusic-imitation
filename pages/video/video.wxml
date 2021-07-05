@@ -1,0 +1,38 @@
+<view class="videoContainer">
+	<!-- 导航区域 -->
+	<scroll-view class="navScroll" scroll-x enable-flex>
+		<view class="scrollItem {{navId===item.id?'active':''}}" bindtap="navChange" wx:for='{{videoGroupList}}' wx:key="id" id='{{item.id}}'>
+			{{item.name}}
+		</view>
+	</scroll-view>
+
+	<!-- 视频列表区域 -->
+	<scroll-view style='height:{{scrollHeight}}px' class="videoScroll" scroll-y enable-flex refresher-enabled bindscrolltolower="videoScrollLower" bindrefresherrefresh="videoRefresh" refresher-triggered="{{isRefresh}}">
+		<view class="videoItem" wx:for='{{videoList}}' wx:key="id">
+			<view class="videoHeader">
+				<video autoplay initial-time='{{startTime}}' wx:if='{{vid===item.data.vid}}' poster="{{item.data.coverUrl}}" id="{{item.data.vid}}" bindtimeupdate="handleTimeUpdate" bindtap="clickVideo" src="{{item.data.urlInfo.url}}"></video>
+				<view wx:else class="imageBack">
+					<image mode='heightFix' id="{{item.data.vid}}" src="{{item.data.coverUrl}}" bindtap="clickVideo"></image>
+				</view>
+			</view>
+			<view class="videoBody">
+				<text>{{item.data.title}}</text>
+			</view>
+			<view class="videoFooter">
+				<view class="right">
+					<image mode='widthFix' src="{{item.data.creator.avatarUrl}}"></image>
+					<text class="nickName">{{item.data.creator.nickname}}</text>
+				</view>
+				<view class="left">
+					<text class="iconfont icon-xihuan1"></text>
+					<text class="count1">{{item.data.praisedCount}}</text>
+					<text class="iconfont icon-taolun"></text>
+					<text class="count2">{{item.data.commentCount}}</text>
+					<button open-type="share" size="mini">
+						<text class="iconfont icon-fenxiang"></text>
+					</button>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>
