@@ -10,19 +10,19 @@
 │  ├─moment
 │  └─pubsub-js
 ├─pages
-│  ├─index
+│  ├─index                 //主页相关
 │  ├─login
 │  ├─mv
 │  ├─personal
-│  ├─playlist
-│  ├─playlistDetail
-│  ├─recommendSong
-│  ├─search
-│  ├─songDetail
-│  ├─toplist
-│  ├─toplistDetail
-│  └─video
-├─static
+│  ├─playlist              //歌单分类页面
+│  ├─playlistDetail        //歌单详情
+│  ├─recommendSong           
+│  ├─search                //搜索页面
+│  ├─songDetail            //音乐播放页面
+│  ├─toplist               //排行榜分类页面
+│  ├─toplistDetail           
+│  └─video                 
+├─static                   //静态资源
 │  ├─iconFont
 │  └─images
 └─utils
