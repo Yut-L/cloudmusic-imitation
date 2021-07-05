@@ -6,7 +6,6 @@
     "pages/toplist/toplist",
     "pages/video/video",
     "pages/songDetail/songDetail",
-
     "pages/login/login",
     "pages/recommendSong/recommendSong",
     "pages/toplistDetail/toplistDetail",

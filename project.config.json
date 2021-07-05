@@ -39,9 +39,9 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.17.3",
+  "libVersion": "2.17.0",
   "appid": "wx88caad969f3c7795",
-  "projectname": "CloudMusic",
+  "projectname": "asf",
   "debugOptions": {
     "hidedInDevtools": []
   },
