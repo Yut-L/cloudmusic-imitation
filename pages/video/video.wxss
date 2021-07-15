@@ -17,6 +17,13 @@
   border-bottom: 1rpx solid #dd001b;
 }
 
+.noLogin{
+  background-color: rgb(217, 223, 222);
+  text-align: center;
+  height: 300rpx;
+  line-height: 300rpx;
+}
+
 .videoScroll {
   background-color: rgb(217, 223, 222);
 }

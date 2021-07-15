@@ -15,12 +15,21 @@ Page({
     scrollHeight: 0,
     lowerNum: 0,
     startTime: 0,
+    isLogin: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 获取用户登录状态
+    // let userInfo = wx.getStorageSync('userInfo'),
+    //   isLogin = Object.keys(userInfo).length;
+    // this.setData({
+    //   isLogin
+    // })
+    // console.log(this.data.isLogin);
+
     this.getVideoGroupListData()
 
     // 计算屏幕高度，才能触发bindscrolltolower
@@ -43,6 +52,10 @@ Page({
 
   // 获取视频标签下的视频
   async getVideoList(navId, offsetNum = 0) {
+    // 判断用户是否登录后再发送请求
+    if (this.data.isLogin === 0) {
+      return
+    }
     let videoListData = await requestData("/video/group", { id: navId, offset: offsetNum }),
       index = 0,
       videoData = videoListData.datas.map(item => { item.id = index++; return item });
@@ -149,7 +162,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    // 更新用户是否登录的判断
+    let userInfo = wx.getStorageSync('userInfo'),
+      isLogin = Object.keys(userInfo).length;
+    this.setData({
+      isLogin
+    })
   },
 
   /**

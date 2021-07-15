@@ -7,6 +7,8 @@
 	</scroll-view>
 
 	<!-- 视频列表区域 -->
+	<view class="noLogin" wx:if="{{isLogin===0}}">请登录后查看</view>
+
 	<scroll-view style='height:{{scrollHeight}}px' class="videoScroll" scroll-y enable-flex refresher-enabled bindscrolltolower="videoScrollLower" bindrefresherrefresh="videoRefresh" refresher-triggered="{{isRefresh}}">
 		<view class="videoItem" wx:for='{{videoList}}' wx:key="id">
 			<view class="videoHeader">
